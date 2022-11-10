@@ -8,7 +8,7 @@ library(gam)
 library(lubridate)
 
 # 0. Getting the data for that year
-hourly_demand <- as.data.frame(read_xlsx("C:/Users/linab/PycharmProjects/Thesis/XM/Demanda_por_OR_2018.xlsx",col_names=c('date','operator_code','hr.0','hr.1','hr.2','hr.3','hr.4','hr.5','hr.6','hr.7','hr.8','hr.9','hr.10','hr.11','hr.12','hr.13','hr.14','hr.15','hr.16','hr.17','hr.18','hr.19','hr.20','hr.21','hr.22','hr.23','version'),skip=3))
+hourly_demand <- as.data.frame(read_xlsx("./colombia_demand_data/Demanda_por_OR_2018.xlsx",col_names=c('date','operator_code','hr.0','hr.1','hr.2','hr.3','hr.4','hr.5','hr.6','hr.7','hr.8','hr.9','hr.10','hr.11','hr.12','hr.13','hr.14','hr.15','hr.16','hr.17','hr.18','hr.19','hr.20','hr.21','hr.22','hr.23','version'),skip=3))
 
 # 1. Dropping the operator information because we dont need it
 drop<-c("operator_code","version")
